@@ -1,15 +1,12 @@
-project = "Waypoint/Ondemandrunner"
+project = "waypoint/odr"
 
 app "waypoint-odr" {
   build {
-    use "nomad" {}
-    // registry {
-    //   use "docker" {
-    //     image = "nodejs-jobspec-web"
-    //     tag   = "1"
-    //     local = true
-    //   }
-    // }
+    use "nomad" {
+      image = "ans/waypoint:0.10.3-docker"
+      tag   = "1"
+      local = true
+    }
   }
 
   deploy {
